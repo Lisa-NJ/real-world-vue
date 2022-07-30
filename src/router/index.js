@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import PlayGroundView from "../views/PlayGroundView.vue";
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,14 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ "../views/AboutView.vue");
     },
+  },
+  {
+    path: "/playground",
+    name: "playground",
+    // component: function () {
+    //   return import(/* webpackChunkName: "playground" */ "../views/PlayGroundView.vue");
+    // },
+    component: PlayGroundView,
   },
 ];
 
